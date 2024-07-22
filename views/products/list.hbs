@@ -1,1 +1,21 @@
 <p>Productos</p>
+
+<div class="row row-cols-1 row-cols-md-5 g-4">
+  {{#each products as |product|}}
+  <div class="col">
+    <div class="card">
+      <div class="me-auto">
+        <img src="{{product.image}}" class="card-img-top" alt="...">
+        <a href="/products/{{product.id}}/delete"><i class="bi bi-x-circle text-danger"></i></a>
+        </a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{product.title}} </h5>
+        <p class="card-text">{{product.id}} - {{product.description}} - {{product.category}}</p>
+      </div>
+    </div>
+  </div>
+  
+  {{/each}}
+  
+</div>
