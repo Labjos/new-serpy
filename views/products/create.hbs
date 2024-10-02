@@ -1,0 +1,18 @@
+<h1>AGREGAR, BORRAR Y EDITAR PRODUCTOS</h1>
+
+<form action="/create-product" method="post" enctype="application/x-www-form-urlencoded">
+  <div class="input-group mb-1">
+    <span class="input-group-text"><i class="fa fa-tag fa-fw"></i></span>
+    <input type="text" name="title" value="{{product.title}}" class="form-control {{#if errors.title }} is-invalid {{/if}}" placeholder="Nombre del producto..." />
+    {{#if errors.title }}<div class="invalid-feedback">{{errors.title}}</div>{{/if}}
+  
+  <div class="input-group mb-1">
+    <span class="input-group-text"><i class="fa fa-book fa-fw"></i></span>
+    <input type="text" name="description" value="{{product.description}}" class="form-control {{#if errors.description}} is-invalid {{/if}}" placeholder="descripción en 2 palabras">
+    {{#if errors.description }} <div class="invalid-feedback">{{errors.description}}</div>{{/if}}
+  </div>
+
+  <div class="form-actions"></div>
+    <button type="submit" class="btn btn-primary" >Agregar nuevo producto</button>
+  </div>
+</form>

@@ -4,18 +4,17 @@
   {{#each products as |product|}}
   <div class="col">
     <div class="card">
-      <div class="me-auto">
+      <a class="me-auto">
         <img src="{{product.image}}" class="card-img-top" alt="...">
         <a href="/products/{{product.id}}/delete"><i class="bi bi-x-circle text-danger"></i></a>
         </a>
       </div>
       <div class="card-body">
         <h5 class="card-title">{{product.title}} </h5>
-        <p class="card-text">{{product.id}} - {{ellipsis product.description 20}} - {{product.category}}</p>
+        <p class="card-text"> {{ellipsis product.description 20}}</p>
+        <a href="/products/{{product.id}}/" class="btn btn-outline-primary">+ Informacion</a>
       </div>
     </div>
   </div>
-  
   {{/each}}
-  
 </div>

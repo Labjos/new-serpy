@@ -1,5 +1,5 @@
 [
-  {"numProduct":"1", "title":"Papelera Redonda",  "description":"papelera plastica" , "other": "x 2 uds"},
-  {"numProduct":"2", "title":"Percha larga",  "description":" plastica" , "other": "x 2 uds inox"}
-
+  {"title":"Papelera Redonda", "image": "https://www.serpy.com.ar/imagenes/Productos/Cepilleria/Violin.jpeg","description":"papelera plastica" , "other": "x 2 uds", "category": "bazar"},
+  {"title":"Percha larga", "image": "https://www.serpy.com.ar/imagenes/Productos/bazar/rolloCocina.jpg", "description":" plastica" , "other": "x 2 uds inox", "category": "incorporacion"},
+  {"title":"Platos Redondos", "image": "https://www.serpy.com.ar/imagenes/Productos/Textil/trapoBlanco.jpg", "description":" plastica" , "other": "x 2 uds inox", "category": "incorporacion"}
 ]

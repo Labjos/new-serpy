@@ -5,19 +5,25 @@ const Schema =  mongoose.Schema;
 
 const productSchema = new Schema(
   {
-    numProduct: {
-      type: Number,
-      required: true
-    },
     title: {
       type: String,
       required: true
     },
     image: {
       type: String,
-      required: false
-
-    },
+      required: false,
+      validate: {
+        validator: function (image) {
+          try {
+            new URL(image);
+            return true;
+          } catch (error) {
+            return false;
+        }
+      }, 
+      message: ('Invalida Image URL')
+    }
+  },
     description: {
       type: String,
       maxlength: [ 20, ' Descripción máximo 2 palabras']
@@ -26,6 +32,11 @@ const productSchema = new Schema(
     other: {
       type: String,
       maxlength: [ 20, ' Descripción máximo 2 palabras']
+    },
+    category: {
+      type: String,
+      enum: ['bazar', 'jardin', 'cepilleria', 'textil', 'plasticos', 'burletes', 'incorporacion', 'promocion' ],
+      default: 'incorporacion'
     }
   },
   { timestamps: true }
